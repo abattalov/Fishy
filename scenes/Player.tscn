@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cex7pduigg4pf"]
+
+[ext_resource type="Texture2D" uid="uid://b5wclbkela0xx" path="res://assets/kenney_fishPack/Vector/fishPack_vector.svg" id="1_66r2a"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_47107"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rqsm0"]
+height = 51.9914
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_47107")
+
+[node name="PlayerFish" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_66r2a")
+region_enabled = true
+region_rect = Rect2(897.501, 427.566, 61.3365, 38.2038)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+rotation = 1.56669
+shape = SubResource("CapsuleShape2D_rqsm0")
