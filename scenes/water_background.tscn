@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://5dfjhabm3fb6"]
+
+[node name="WaterBackground" type="ColorRect"]
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0.109804, 0.466667, 0.764706, 1)
