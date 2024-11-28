@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv3fj8iobinv"]
+[gd_scene load_steps=11 format=3 uid="uid://dv3fj8iobinv"]
 
 [ext_resource type="PackedScene" uid="uid://q87tp5jlq0jv" path="res://scenes/sand.tscn" id="1_c4xgu"]
 [ext_resource type="PackedScene" uid="uid://5dfjhabm3fb6" path="res://scenes/water_background.tscn" id="2_wy0ny"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cex7pduigg4pf" path="res://scenes/Player.tscn" id="4_vww5c"]
 [ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="5_8nbii"]
 [ext_resource type="Script" path="res://scenes/EnemySpawner.gd" id="6_gjcc4"]
+[ext_resource type="PackedScene" uid="uid://dnpdidk0stkbl" path="res://scenes/enemy_fish_2.tscn" id="7_uwbi3"]
+[ext_resource type="PackedScene" uid="uid://5xund0jyyylf" path="res://scenes/enemy_fish_3.tscn" id="8_tq4sp"]
+[ext_resource type="PackedScene" uid="uid://6igwd7ddt72a" path="res://scenes/enemy_fish_4.tscn" id="9_hnknq"]
+[ext_resource type="PackedScene" uid="uid://b1skmbvq6vvgq" path="res://scenes/enemy_fish_5.tscn" id="10_neql1"]
 
 [node name="Game" type="Node2D"]
 
@@ -41,9 +45,10 @@ position = Vector2(200, 134)
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 script = ExtResource("6_gjcc4")
-enemy_scene = ExtResource("5_8nbii")
+enemy_scenes = Array[PackedScene]([ExtResource("5_8nbii"), ExtResource("7_uwbi3"), ExtResource("8_tq4sp"), ExtResource("9_hnknq"), ExtResource("10_neql1")])
 
 [node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_timer_timout"]

@@ -3,20 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_4pdu1"]
 [ext_resource type="Script" path="res://scenes/enemy_fish.gd" id="1_mj4ih"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_le7gk"]
-radius = 13.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_2welc"]
+radius = 7.0
 
 [node name="EnemyFish" type="CharacterBody2D"]
 script = ExtResource("1_mj4ih")
 
 [node name="EnemyFish" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, 5.96046e-08)
-scale = Vector2(0.377358, 0.377358)
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.867251, 0.867251)
 texture = ExtResource("1_4pdu1")
 region_enabled = true
-region_rect = Rect2(1289.72, 650.981, 109.629, 106.173)
+region_rect = Rect2(1413.78, 647.725, 116.627, 112.895)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 0)
-shape = SubResource("CapsuleShape2D_le7gk")
+position = Vector2(8, 0)
+shape = SubResource("CircleShape2D_2welc")

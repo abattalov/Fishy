@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnpdidk0stkbl"]
+
+[ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="1_vme44"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ap2v2"]
+radius = 24.0208
+
+[node name="EnemyFish2" instance=ExtResource("1_vme44")]
+
+[node name="EnemyFish" parent="." index="0"]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(0.678263, 0.678263)
+region_rect = Rect2(899.966, 527.239, 120.219, 96.7363)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(10, 2)
+shape = SubResource("CircleShape2D_ap2v2")

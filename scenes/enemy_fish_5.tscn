@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1skmbvq6vvgq"]
+
+[ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="1_8k2p7"]
+
+[node name="EnemyFish5" instance=ExtResource("1_8k2p7")]
+
+[node name="EnemyFish" parent="." index="0"]
+position = Vector2(0, 0)
+scale = Vector2(0.341033, 0.341033)
+region_rect = Rect2(404.163, 547.975, 86.9426, 54.7466)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, 0)

@@ -9,9 +9,12 @@ var face_direction = 1
 @onready var enemy_fish: Sprite2D = %EnemyFish
 
 func _physics_process(delta):
+	
+	if face_direction < 0:
+		enemy_fish.flip_h = true
+		
 	var screen_size = get_viewport().get_visible_rect().size	
 	direction = Vector2(1.0,0.0)
-	print(position)
 	
 	if !is_deleted:
 		if face_direction == 1 and position.x > screen_size.x:

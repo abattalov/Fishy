@@ -10,7 +10,6 @@ const GRAVITY = 20.0
 func _physics_process(delta):
 	
 	var screen_size = get_viewport().get_visible_rect().size #1152,648
-	#print(position)
 	
 	#wrap around effect
 	if position.x > screen_size.x:
