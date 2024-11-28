@@ -8,21 +8,9 @@ var face_direction = 1
 
 @onready var enemy_fish: Sprite2D = %EnemyFish
 
-func _ready():
-	var screen_size = get_viewport().get_visible_rect().size
-	if randf() < 0.5:
-		print("moving right")
-		position = Vector2(-10.0, randf() * screen_size.y)
-		face_direction = 1
-	else:
-		print("moving left")
-		position = Vector2(screen_size.x + 10, randf() * screen_size.y)
-		face_direction = -1
-	
-
 func _physics_process(delta):
 	var screen_size = get_viewport().get_visible_rect().size	
-	var direction = Vector2(1.0,0.0)
+	direction = Vector2(1.0,0.0)
 	print(position)
 	
 	if !is_deleted:
