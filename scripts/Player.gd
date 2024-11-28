@@ -8,6 +8,14 @@ const GRAVITY = 20.0
 	
 func _physics_process(delta):
 	
+	var screen_size = get_viewport().get_visible_rect().size #1152,648
+	print(position)
+	
+	if position.x > screen_size.x:
+		position.x = 0
+	elif position.x < 0:
+		position.x = screen_size.x
+	
 	var horizontal_direction = Input.get_axis("ui_left", "ui_right")
 	var verticle_direction = Input.get_axis("ui_up", "ui_down")
 	

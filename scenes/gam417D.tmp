@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cex7pduigg4pf" path="res://scenes/Player.tscn" id="4_vww5c"]
 
 [node name="Game" type="Node2D"]
+position = Vector2(670, 656)
 
 [node name="OceanFloor" type="Node" parent="."]
 
@@ -31,5 +32,5 @@ layer_0/tile_data = PackedInt32Array(2359296, 3866625, 24, 2424832, 3866625, 25,
 
 [node name="Player" parent="." instance=ExtResource("4_vww5c")]
 z_index = 1
-position = Vector2(576, 324)
+position = Vector2(-112, -362)
 motion_mode = 1
