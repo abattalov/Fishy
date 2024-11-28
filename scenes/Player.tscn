@@ -7,6 +7,7 @@
 height = 51.9914
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_47107")
 
 [node name="PlayerFish" type="Sprite2D" parent="."]

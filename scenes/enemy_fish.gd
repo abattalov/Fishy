@@ -17,10 +17,10 @@ func _physics_process(delta):
 	direction = Vector2(1.0,0.0)
 	
 	if !is_deleted:
-		if face_direction == 1 and position.x > screen_size.x:
+		if face_direction == 1 and position.x > screen_size.x + 200:
 			is_deleted = true
 			queue_free()
-		elif face_direction == -1 and position.x < 0:
+		elif face_direction == -1 and position.x < -200:
 			is_deleted = true
 			queue_free()
 	

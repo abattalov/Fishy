@@ -18,9 +18,14 @@ func _on_timer_timout() -> void:
 	add_child(new_enemy)
 	var screen_size = get_viewport().get_visible_rect().size
 	
+	var enemy_sprite = new_enemy.get_node("%EnemyFish")  # Assuming %EnemyFish is the correct path
+	var region_size = enemy_sprite.region_rect.size if enemy_sprite.region_enabled else enemy_sprite.texture.get_size()
+	
+	print(region_size)
+	
 	if randf() < 0.5:
-		new_enemy.position = Vector2(-10.0, randf() * screen_size.y)
+		new_enemy.position = Vector2(-(region_size.x + 100), randf() * screen_size.y)
 		new_enemy.face_direction = 1  # Move right
 	else:
-		new_enemy.position = Vector2(screen_size.x + 10, randf() * screen_size.y)
+		new_enemy.position = Vector2(screen_size.x + region_size.x + 100, randf() * screen_size.y)
 		new_enemy.face_direction = -1  # Move left
