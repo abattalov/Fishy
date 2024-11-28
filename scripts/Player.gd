@@ -6,11 +6,13 @@ const GRAVITY = 20.0
 
 @onready var player_fish = %PlayerFish
 	
+
 func _physics_process(delta):
 	
 	var screen_size = get_viewport().get_visible_rect().size #1152,648
 	print(position)
 	
+	#wrap around effect
 	if position.x > screen_size.x:
 		position.x = 0
 	elif position.x < 0:

@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://emwqfyr3517l"]
+[gd_scene load_steps=4 format=3 uid="uid://emwqfyr3517l"]
 
-[node name="EnemyFish" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_4pdu1"]
+[ext_resource type="Script" path="res://scenes/enemy_fish.gd" id="1_mj4ih"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_le7gk"]
+radius = 13.0
+
+[node name="EnemyFish" type="CharacterBody2D"]
+script = ExtResource("1_mj4ih")
+
+[node name="EnemyFish" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(0.377358, 0.377358)
+texture = ExtResource("1_4pdu1")
+region_enabled = true
+region_rect = Rect2(1289.72, 650.981, 109.629, 106.173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 0)
+shape = SubResource("CapsuleShape2D_le7gk")
