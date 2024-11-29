@@ -38,5 +38,8 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if player.is_bigger(self):
+			player.grow()
 			detection_area.body_entered.disconnect(_on_area_2d_body_entered)
 			queue_free()
+		else:
+			player.die()
