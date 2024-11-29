@@ -6,7 +6,13 @@ var is_deleted = false
 var direction
 var face_direction = 1
 
+
 @onready var enemy_fish: Sprite2D = %EnemyFish
+@onready var detection_area: Area2D = $Area2D
+@onready var player = get_tree().get_first_node_in_group("Player")
+
+func _ready() -> void:
+	detection_area.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta):
 	
@@ -29,4 +35,8 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
-	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		if player.is_bigger(self):
+			detection_area.body_entered.disconnect(_on_area_2d_body_entered)
+			queue_free()

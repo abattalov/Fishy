@@ -2,15 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="1_x6pfc"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fvjs4"]
-resource_local_to_scene = true
-radius = 23.0217
+[sub_resource type="CircleShape2D" id="CircleShape2D_ja3i1"]
+radius = 22.0227
 
 [node name="EnemyFish4" instance=ExtResource("1_x6pfc")]
 
 [node name="EnemyFish" parent="." index="0"]
 region_rect = Rect2(642.718, 538.093, 123.158, 76.5073)
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(15, 1)
-shape = SubResource("CircleShape2D_fvjs4")
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(15, 0)
+shape = SubResource("CircleShape2D_ja3i1")

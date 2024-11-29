@@ -5,7 +5,20 @@ const FRICTION = 300.0
 const GRAVITY = 20.0
 
 @onready var player_fish = %PlayerFish
+@onready var player_sprite: Sprite2D = %PlayerFish
+
+func is_bigger(enemy: CharacterBody2D) -> bool:
+	print("enemy size", enemy.enemy_fish.region_rect.size.x)
+	print("player size", player_sprite.region_rect.size.x)
+	print("enemy scale ", enemy.enemy_fish.scale)
+	var enemy_size = enemy.enemy_fish.region_rect.size.x * enemy.enemy_fish.scale.x
+	var player_size = player_sprite.region_rect.size.x * player_sprite.scale.x
 	
+	if player_size > enemy_size:
+		return true
+	else:
+		return false
+
 
 func _physics_process(delta):
 	
@@ -34,8 +47,4 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, FRICTION * delta)
 		
-	
-
 	move_and_slide()
-	
-	

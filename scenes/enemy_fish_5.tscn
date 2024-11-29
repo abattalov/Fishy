@@ -2,9 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="1_8k2p7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fdkbr"]
-resource_local_to_scene = true
-radius = 8.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_enycp"]
+radius = 7.07107
 
 [node name="EnemyFish5" instance=ExtResource("1_8k2p7")]
 
@@ -13,6 +12,6 @@ position = Vector2(0, 0)
 scale = Vector2(0.341033, 0.341033)
 region_rect = Rect2(404.163, 547.975, 86.9426, 54.7466)
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(1, 0)
-shape = SubResource("CircleShape2D_fdkbr")
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_enycp")

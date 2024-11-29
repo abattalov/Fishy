@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://emwqfyr3517l" path="res://scenes/enemy_fish.tscn" id="1_to26k"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bauat"]
-radius = 22.0
-height = 308.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_luwf6"]
+radius = 25.0
+height = 320.0
 
 [node name="EnemyFish6" instance=ExtResource("1_to26k")]
 
@@ -13,7 +13,7 @@ position = Vector2(0, -1)
 scale = Vector2(1.64931, 1.64931)
 region_rect = Rect2(2073.48, 676.539, 203.819, 51.6129)
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(-1, -2)
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-2, 1)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_bauat")
+shape = SubResource("CapsuleShape2D_luwf6")

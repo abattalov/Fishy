@@ -19,6 +19,10 @@ texture = ExtResource("1_4pdu1")
 region_enabled = true
 region_rect = Rect2(1413.78, 647.725, 116.627, 112.895)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(8, 0)
 shape = SubResource("CircleShape2D_2welc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
