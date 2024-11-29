@@ -10,6 +10,7 @@ var face_direction = 1
 @onready var enemy_fish: Sprite2D = %EnemyFish
 @onready var detection_area: Area2D = $Area2D
 @onready var player = get_tree().get_first_node_in_group("Player")
+@onready var fish_collider: CollisionShape2D = $Area2D/CollisionShape2D
 
 func _ready() -> void:
 	detection_area.body_entered.connect(_on_area_2d_body_entered)

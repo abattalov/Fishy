@@ -11,9 +11,6 @@ const GROWTH = 1.025
 @onready var game_over_ui: Control = $"../GameOverScreen/GameOverUI"
 
 func is_bigger(enemy: CharacterBody2D) -> bool:
-	print("enemy size", enemy.enemy_fish.region_rect.size.x)
-	print("player size", player_sprite.region_rect.size.x)
-	print("enemy scale ", enemy.enemy_fish.scale)
 	var enemy_size = enemy.enemy_fish.region_rect.size.x * enemy.enemy_fish.scale.x
 	var player_size = player_sprite.region_rect.size.x * player_sprite.scale.x
 	
@@ -34,7 +31,6 @@ func grow():
 
 
 func _physics_process(delta):
-	
 	var screen_size = get_viewport().get_visible_rect().size #1152,648
 	
 	#wrap around effect
