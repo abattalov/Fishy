@@ -3,11 +3,12 @@ extends CharacterBody2D
 const SPEED = 200.0
 const FRICTION = 300.0
 const GRAVITY = 20.0
-const GROWTH = 1.1
+const GROWTH = 1.025
 
 @onready var player_fish = %PlayerFish
 @onready var player_sprite: Sprite2D = %PlayerFish
 @onready var player_collider: CollisionShape2D = $CollisionShape2D
+@onready var game_over_ui: Control = $"../GameOverScreen/GameOverUI"
 
 func is_bigger(enemy: CharacterBody2D) -> bool:
 	print("enemy size", enemy.enemy_fish.region_rect.size.x)
@@ -23,6 +24,8 @@ func is_bigger(enemy: CharacterBody2D) -> bool:
 		
 func die():
 	queue_free()
+	#get_tree().paused = true
+	game_over_ui.visible = true
 
 func grow():
 	player_sprite.scale *= GROWTH

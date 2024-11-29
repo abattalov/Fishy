@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dv3fj8iobinv"]
+[gd_scene load_steps=14 format=3 uid="uid://dv3fj8iobinv"]
 
 [ext_resource type="PackedScene" uid="uid://q87tp5jlq0jv" path="res://scenes/sand.tscn" id="1_c4xgu"]
 [ext_resource type="PackedScene" uid="uid://5dfjhabm3fb6" path="res://scenes/water_background.tscn" id="2_wy0ny"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://6igwd7ddt72a" path="res://scenes/enemy_fish_4.tscn" id="9_hnknq"]
 [ext_resource type="PackedScene" uid="uid://b1skmbvq6vvgq" path="res://scenes/enemy_fish_5.tscn" id="10_neql1"]
 [ext_resource type="PackedScene" uid="uid://dqlxbe43m00ym" path="res://scenes/enemy_fish_6.tscn" id="11_s2dxp"]
+[ext_resource type="Script" path="res://scenes/GameOverUI.gd" id="12_oojcj"]
+[ext_resource type="Theme" uid="uid://d4jvt4ss50osy" path="res://scenes/fishy_theme.tres" id="13_n4xi6"]
 
 [node name="Game" type="Node2D"]
 
@@ -52,4 +54,35 @@ enemy_scenes = Array[PackedScene]([ExtResource("5_8nbii"), ExtResource("7_uwbi3"
 wait_time = 0.5
 autostart = true
 
+[node name="GameOverScreen" type="CanvasLayer" parent="."]
+
+[node name="GameOverUI" type="Control" parent="GameOverScreen"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -30.0
+offset_right = 1182.0
+offset_bottom = 665.0
+script = ExtResource("12_oojcj")
+
+[node name="Retry" type="Button" parent="GameOverScreen/GameOverUI"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 371.0
+offset_right = 566.0
+offset_bottom = 460.0
+theme = ExtResource("13_n4xi6")
+text = "Retry"
+
+[node name="Quit" type="Button" parent="GameOverScreen/GameOverUI"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 370.0
+offset_right = 784.0
+offset_bottom = 459.0
+theme = ExtResource("13_n4xi6")
+text = "Quit"
+
 [connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_timer_timout"]
+[connection signal="pressed" from="GameOverScreen/GameOverUI/Retry" to="GameOverScreen/GameOverUI" method="_on_retry_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverUI/Quit" to="GameOverScreen/GameOverUI" method="_on_quit_pressed"]
