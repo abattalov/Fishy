@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
 const FRICTION = 300.0
 var is_deleted = false
 var direction
 var face_direction = 1
 
+@export var speed = 200.0
 
 @onready var enemy_fish: Sprite2D = %EnemyFish
 @onready var detection_area: Area2D = $Area2D
@@ -30,7 +30,7 @@ func _physics_process(delta):
 			is_deleted = true
 			queue_free()
 	
-	velocity.x = direction.x * SPEED * face_direction
+	velocity.x = direction.x * speed * face_direction
 	velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 		
 	move_and_slide()

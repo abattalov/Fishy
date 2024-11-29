@@ -11,6 +11,7 @@ func _on_timer_timout() -> void:
 	
 	if enemy_scenes.size() == 0:
 		return
+		
 	var random_index = randi() % enemy_scenes.size()
 	var enemy_scene = enemy_scenes[random_index]
 	

@@ -7,6 +7,7 @@ resource_local_to_scene = true
 radius = 15.0333
 
 [node name="EnemyFish2" instance=ExtResource("1_vme44")]
+speed = 175.0
 
 [node name="EnemyFish" parent="." index="0"]
 position = Vector2(0.999998, 0)

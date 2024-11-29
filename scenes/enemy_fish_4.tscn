@@ -6,6 +6,7 @@
 radius = 22.0227
 
 [node name="EnemyFish4" instance=ExtResource("1_x6pfc")]
+speed = 100.0
 
 [node name="EnemyFish" parent="." index="0"]
 region_rect = Rect2(642.718, 538.093, 123.158, 76.5073)
