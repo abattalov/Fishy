@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv3fj8iobinv"]
+[gd_scene load_steps=15 format=3 uid="uid://dv3fj8iobinv"]
 
 [ext_resource type="PackedScene" uid="uid://q87tp5jlq0jv" path="res://scenes/sand.tscn" id="1_c4xgu"]
+[ext_resource type="PackedScene" uid="uid://cf602amn60mc7" path="res://scenes/bubbles.tscn" id="2_pxljk"]
 [ext_resource type="PackedScene" uid="uid://5dfjhabm3fb6" path="res://scenes/water_background.tscn" id="2_wy0ny"]
 [ext_resource type="PackedScene" uid="uid://du4bn0trkgoyn" path="res://scenes/weeds.tscn" id="3_coawa"]
 [ext_resource type="PackedScene" uid="uid://cex7pduigg4pf" path="res://scenes/Player.tscn" id="4_vww5c"]
@@ -21,8 +22,11 @@ z_index = 1
 position = Vector2(576, 324)
 motion_mode = 1
 
+[node name="Bubbles" parent="Player" instance=ExtResource("2_pxljk")]
+position = Vector2(21, 2)
+
 [node name="EnemyFish" parent="." instance=ExtResource("5_8nbii")]
-position = Vector2(200, 134)
+position = Vector2(-300, 134)
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 script = ExtResource("6_gjcc4")
@@ -70,10 +74,10 @@ anchor_left = -0.0989583
 anchor_top = -0.00308642
 anchor_right = 0.0694444
 anchor_bottom = -0.00308642
-offset_left = 83.0
-offset_top = -3.0
-offset_right = 1106.0
-offset_bottom = 654.0
+offset_left = 103.0
+offset_top = -2.0
+offset_right = 1126.0
+offset_bottom = 655.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Weeds" parent="OceanFloor" instance=ExtResource("3_coawa")]

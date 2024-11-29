@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cf602amn60mc7"]
+
+[node name="Bubbles" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 15
+lifetime = 15.0
+speed_scale = 2.5
+emission_shape = 1
+emission_sphere_radius = 13.09
+gravity = Vector2(0, -10)
+scale_amount_max = 8.87
+color = Color(0.584314, 1, 1, 0.427451)
