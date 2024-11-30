@@ -5,6 +5,8 @@ const FRICTION = 300.0
 const GRAVITY = 20.0
 const GROWTH = 1.025
 
+var current_score: int = 0
+
 @onready var player_fish = %PlayerFish
 @onready var player_sprite: Sprite2D = %PlayerFish
 @onready var player_collider: CollisionShape2D = $CollisionShape2D
@@ -19,6 +21,10 @@ func is_bigger(enemy: CharacterBody2D) -> bool:
 	else:
 		return false
 		
+
+func add_fish_to_score():
+	current_score += 1
+	print(current_score)
 func die():
 	queue_free()
 	#get_tree().paused = true

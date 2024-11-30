@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://emwqfyr3517l"]
 
 [ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_4pdu1"]
-[ext_resource type="Script" path="res://scenes/enemy_fish.gd" id="1_mj4ih"]
+[ext_resource type="Script" path="res://scripts/enemy_fish.gd" id="1_dslei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2welc"]
 resource_local_to_scene = true
@@ -9,7 +9,7 @@ radius = 37.3363
 
 [node name="EnemyFish" type="CharacterBody2D"]
 collision_layer = 2
-script = ExtResource("1_mj4ih")
+script = ExtResource("1_dslei")
 
 [node name="EnemyFish" type="Sprite2D" parent="."]
 unique_name_in_owner = true

@@ -1,13 +1,18 @@
-[gd_scene format=3 uid="uid://cf602amn60mc7"]
+[gd_scene load_steps=2 format=3 uid="uid://cf602amn60mc7"]
+
+[ext_resource type="Texture2D" uid="uid://bv1607khrjhrm" path="res://assets/bubble_transparent.png" id="1_np0fd"]
 
 [node name="Bubbles" type="Node2D"]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-amount = 15
+amount = 6
 lifetime = 15.0
-speed_scale = 2.5
+speed_scale = 2.48
+randomness = 0.13
+texture = ExtResource("1_np0fd")
 emission_shape = 1
-emission_sphere_radius = 13.09
+emission_sphere_radius = 6.82
 gravity = Vector2(0, -10)
-scale_amount_max = 8.87
+scale_amount_min = 0.01
+scale_amount_max = 0.08
 color = Color(0.584314, 1, 1, 0.427451)

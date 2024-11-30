@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://cree6sp7kr7on"]
+
+[ext_resource type="Texture2D" uid="uid://bsptgvr3cadmj" path="res://assets/kenney_fishPack/Spritesheet/fishSpritesheet@2.png" id="1_5gw04"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fish_I" type="Sprite2D" parent="Control/HFlowContainer"]
+visible = false
+position = Vector2(34, 19)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("1_5gw04")
+region_enabled = true
+region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)
+
+[node name="Fish_I2" type="Sprite2D" parent="Control/HFlowContainer"]
+visible = false
+position = Vector2(85, 19)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("1_5gw04")
+region_enabled = true
+region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)
+
+[node name="Fish_I3" type="Sprite2D" parent="Control/HFlowContainer"]
+visible = false
+position = Vector2(135, 19)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("1_5gw04")
+region_enabled = true
+region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)
+
+[node name="Fish_I4" type="Sprite2D" parent="Control/HFlowContainer"]
+visible = false
+position = Vector2(183, 19)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("1_5gw04")
+region_enabled = true
+region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)
