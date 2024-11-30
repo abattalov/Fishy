@@ -4,7 +4,7 @@ const FRICTION = 300.0
 var is_deleted = false
 var direction
 var face_direction = 1
-var score: int = 0
+var score_ui
 
 @export var speed = 200.0
 
@@ -40,7 +40,7 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if player.is_bigger(self):
-			player.add_fish_to_score()
+			score_ui.increment_score(1)
 			player.grow()
 			detection_area.body_entered.disconnect(_on_area_2d_body_entered)
 			queue_free()

@@ -18,6 +18,8 @@
 
 [node name="Game" type="Node2D"]
 
+[node name="ScoreUI" parent="." instance=ExtResource("12_cq6wm")]
+
 [node name="Player" parent="." instance=ExtResource("4_vww5c")]
 z_index = 1
 position = Vector2(576, 324)
@@ -65,8 +67,6 @@ offset_right = 784.0
 offset_bottom = 459.0
 theme = ExtResource("13_n4xi6")
 text = "Quit"
-
-[node name="CanvasLayer" parent="." instance=ExtResource("12_cq6wm")]
 
 [node name="OceanFloor" type="Node" parent="."]
 

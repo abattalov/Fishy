@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5wrm8a8ltoii"]
+
+[ext_resource type="Texture2D" uid="uid://bsptgvr3cadmj" path="res://assets/kenney_fishPack/Spritesheet/fishSpritesheet@2.png" id="1_q403o"]
+
+[node name="Fish_I" type="Sprite2D"]
+position = Vector2(34, 19)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("1_q403o")
+region_enabled = true
+region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)

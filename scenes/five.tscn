@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://64t52es80qm8"]
+
+[ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_imyx8"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_imyx8")
+region_enabled = true
+region_rect = Rect2(1048.43, 682.398, 94.9343, 46.8394)

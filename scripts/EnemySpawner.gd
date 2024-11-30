@@ -16,6 +16,7 @@ func _on_timer_timout() -> void:
 	var enemy_scene = enemy_scenes[random_index]
 	
 	var new_enemy: CharacterBody2D = enemy_scene.instantiate()
+	new_enemy.score_ui = $"../ScoreUI"
 	
 	if new_enemy.name == "EnemyFish6":
 		if randf() < 0.2:
