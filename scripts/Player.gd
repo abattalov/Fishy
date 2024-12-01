@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 200.0
-const FRICTION = 300.0
+const FRICTION = 200.0
 const GRAVITY = 20.0
 const GROWTH = 1.025
 
@@ -47,7 +47,6 @@ func _physics_process(delta):
 	
 	var horizontal_direction = Input.get_axis("ui_left", "ui_right")
 	var verticle_direction = Input.get_axis("ui_up", "ui_down")
-	
 
 	if horizontal_direction:
 		velocity.x = horizontal_direction * SPEED
@@ -57,9 +56,9 @@ func _physics_process(delta):
 		
 	if verticle_direction:
 		velocity.y = verticle_direction * SPEED
-	elif verticle_direction == 0:
-		velocity.y = GRAVITY
 	else:
 		velocity.y = move_toward(velocity.y, 0, FRICTION * delta)
+		if velocity.y == 0:
+			velocity.y = GRAVITY
 		
 	move_and_slide()

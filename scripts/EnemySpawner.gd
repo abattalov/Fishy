@@ -19,7 +19,7 @@ func _on_timer_timout() -> void:
 	new_enemy.score_ui = $"../ScoreUI"
 	
 	if new_enemy.name == "EnemyFish6":
-		if randf() < 0.2:
+		if randf() < 0.5:
 			new_enemy.queue_free()
 			
 	add_child(new_enemy)
