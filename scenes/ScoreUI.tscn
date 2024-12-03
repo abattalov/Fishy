@@ -24,6 +24,7 @@ offset_bottom = 97.0
 theme_override_constants/h_separation = 33
 
 [node name="Fish_I" parent="Control/HFlowContainer" instance=ExtResource("2_2mofh")]
+visible = false
 layout_mode = 2
 
 [node name="HFlowContainer2" type="HFlowContainer" parent="Control"]
@@ -35,6 +36,7 @@ offset_bottom = 70.0
 theme_override_constants/h_separation = 49
 
 [node name="Fish_V" parent="Control/HFlowContainer2" instance=ExtResource("3_2ndqm")]
+visible = false
 layout_mode = 2
 
 [node name="HFlowContainer3" type="HFlowContainer" parent="Control"]
@@ -46,6 +48,7 @@ offset_bottom = 45.0
 theme_override_constants/h_separation = 49
 
 [node name="Fish_V" parent="Control/HFlowContainer3" instance=ExtResource("3_2ndqm")]
+visible = false
 layout_mode = 2
 
 [node name="HFlowContainer4" type="HFlowContainer" parent="Control"]
@@ -57,4 +60,5 @@ offset_bottom = 17.0
 theme_override_constants/h_separation = 49
 
 [node name="Fish_V" parent="Control/HFlowContainer4" instance=ExtResource("3_2ndqm")]
+visible = false
 layout_mode = 2
