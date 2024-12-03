@@ -2,7 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_imyx8"]
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="Fish_V" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.41, 0.41)
 texture = ExtResource("1_imyx8")
 region_enabled = true
-region_rect = Rect2(1048.43, 682.398, 94.9343, 46.8394)
+region_rect = Rect2(1048.24, 680.227, 93.04, 50.025)

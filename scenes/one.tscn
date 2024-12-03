@@ -1,10 +1,18 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5wrm8a8ltoii"]
 
-[ext_resource type="Texture2D" uid="uid://bsptgvr3cadmj" path="res://assets/kenney_fishPack/Spritesheet/fishSpritesheet@2.png" id="1_q403o"]
+[ext_resource type="Texture2D" uid="uid://bh035p1bl17v0" path="res://assets/kenney_fishPack/Tilesheet/fishTilesheet@2.png" id="1_rpcoy"]
 
-[node name="Fish_I" type="Sprite2D"]
-position = Vector2(34, 19)
+[node name="Fish_I" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 34.0
+offset_top = 19.0
+offset_right = 34.0
+offset_bottom = 19.0
 scale = Vector2(0.429825, 0.429825)
-texture = ExtResource("1_q403o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("1_rpcoy")
 region_enabled = true
-region_rect = Rect2(751.897, 410.55, 101.093, 57.0639)
+region_rect = Rect2(284.945, 680.844, 75.6395, 46.8513)
