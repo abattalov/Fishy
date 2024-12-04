@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dv3fj8iobinv"]
+[gd_scene load_steps=17 format=3 uid="uid://dv3fj8iobinv"]
 
 [ext_resource type="PackedScene" uid="uid://q87tp5jlq0jv" path="res://scenes/sand.tscn" id="1_c4xgu"]
 [ext_resource type="PackedScene" uid="uid://cf602amn60mc7" path="res://scenes/bubbles.tscn" id="2_pxljk"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cree6sp7kr7on" path="res://scenes/ScoreUI.tscn" id="12_cq6wm"]
 [ext_resource type="Script" path="res://scripts/GameOverUI.gd" id="12_oojcj"]
 [ext_resource type="Theme" uid="uid://d4jvt4ss50osy" path="res://assets/fishy_theme.tres" id="13_n4xi6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r8vn"]
+size = Vector2(1238, 192)
 
 [node name="Game" type="Node2D"]
 
@@ -69,6 +72,20 @@ theme = ExtResource("13_n4xi6")
 text = "Quit"
 
 [node name="OceanFloor" type="Node" parent="."]
+
+[node name="Ceiling" type="StaticBody2D" parent="OceanFloor"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OceanFloor/Ceiling"]
+position = Vector2(590, -92)
+shape = SubResource("RectangleShape2D_4r8vn")
+
+[node name="Floor" type="StaticBody2D" parent="OceanFloor"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OceanFloor/Floor"]
+position = Vector2(611, 750)
+shape = SubResource("RectangleShape2D_4r8vn")
 
 [node name="WaterBackground" parent="OceanFloor" instance=ExtResource("2_wy0ny")]
 z_index = -10
