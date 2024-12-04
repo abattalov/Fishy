@@ -14,4 +14,4 @@ grow_vertical = 2
 scale = Vector2(0.415, 0.415)
 texture = ExtResource("1_7lt3h")
 region_enabled = true
-region_rect = Rect2(531.892, 669.666, 103.135, 60.7882)
+region_rect = Rect2(531.892, 669.666, 105.148, 81.665)

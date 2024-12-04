@@ -33,29 +33,63 @@ func update_display():
 		score_container_four.remove_child(child)
 		child.queue_free()
 	
-	var num_hundreds = score / 100
-	var remaining_after_hundreds = score % 100
+	var num_hundreds = score / 125
+	var remaining_after_hundreds = score % 125
 	var num_twenty_fives = remaining_after_hundreds / 25
 	var reamining_after_twenty_fives = remaining_after_hundreds % 25
 	var num_fives = reamining_after_twenty_fives / 5
 	var num_ones = reamining_after_twenty_fives % 5
 	
-	for i in range(num_hundreds):
-		var one_hundred_instance = one_hundred.instantiate()
-		score_container_four.add_child(one_hundred_instance)
-	
-	for i in range(num_twenty_fives):
-		var twenty_five_instance = twenty_five.instantiate()
-		score_container_three.add_child(twenty_five_instance)
-	
-	for i in range(num_fives):
-		var five_instance = five_tally.instantiate()
-		score_container_two.add_child(five_instance)
+	if num_hundreds == 0 and num_twenty_fives == 0 and num_fives == 0:
+			
+		for i in range(num_ones):
+			var one_instance = one_tally.instantiate()
+			score_container_one.add_child(one_instance)
+	elif num_hundreds == 0 and num_twenty_fives == 0:
+
+		for i in range(num_fives):
+			var five_instance = five_tally.instantiate()
+			score_container_one.add_theme_constant_override("h_separation", 49)
+			score_container_one.add_child(five_instance)
+			
+		for i in range(num_ones):
+			var one_instance = one_tally.instantiate()
+			score_container_two.add_theme_constant_override("h_separation", 33)
+			score_container_two.add_child(one_instance)
+	elif num_hundreds == 0:
+			
+		for i in range(num_twenty_fives):
+			var twenty_five_instance = twenty_five.instantiate()
+			score_container_one.add_theme_constant_override("h_separation", 49)
+			score_container_one.add_child(twenty_five_instance)
+			
+		for i in range(num_fives):
+			var five_instance = five_tally.instantiate()
+			score_container_two.add_child(five_instance)
+			
+		for i in range(num_ones):
+			var one_instance = one_tally.instantiate()
+			score_container_three.add_theme_constant_override("h_separation", 33)
+			score_container_three.add_child(one_instance)
+	else:
+		for i in range(num_hundreds):
+			var one_hundred_instance = one_hundred.instantiate()
+			score_container_one.add_theme_constant_override("h_separation", 49)
+			score_container_one.add_child(one_hundred_instance)	
+			
+		for i in range(num_twenty_fives):
+			var twenty_five_instance = twenty_five.instantiate()
+			score_container_two.add_child(twenty_five_instance)
+			
+		for i in range(num_fives):
+			var five_instance = five_tally.instantiate()
+			score_container_three.add_child(five_instance)
+			
+		for i in range(num_ones):
+			var one_instance = one_tally.instantiate()
+			score_container_four.add_theme_constant_override("h_separation", 33)
+			score_container_four.add_child(one_instance)
 		
-	for i in range(num_ones):
-		var one_instance = one_tally.instantiate()
-		score_container_one.add_child(one_instance)
-		
-		
+			
 func increment_score(amount: int = 1):
 	update_score(score + amount)

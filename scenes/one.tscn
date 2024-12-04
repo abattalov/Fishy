@@ -15,4 +15,4 @@ scale = Vector2(0.429825, 0.429825)
 scale = Vector2(0.385, 0.385)
 texture = ExtResource("1_rpcoy")
 region_enabled = true
-region_rect = Rect2(284.945, 680.844, 75.6395, 46.8513)
+region_rect = Rect2(284.945, 680.844, 105.148, 81.665)

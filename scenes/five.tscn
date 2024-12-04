@@ -10,4 +10,4 @@ anchors_preset = 0
 scale = Vector2(0.41, 0.41)
 texture = ExtResource("1_imyx8")
 region_enabled = true
-region_rect = Rect2(1048.24, 680.227, 93.04, 50.025)
+region_rect = Rect2(1048.24, 680.227, 105.148, 81.665)
