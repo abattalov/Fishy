@@ -11,6 +11,7 @@ var current_score: int = 0
 @onready var player_sprite: Sprite2D = %PlayerFish
 @onready var player_collider: CollisionShape2D = $CollisionShape2D
 @onready var game_over_ui: Control = $"../GameOverScreen/GameOverUI"
+@onready var win_ui: Control = $"../WinScreen/WinUI"
 
 func is_bigger(enemy: CharacterBody2D) -> bool:
 	var enemy_size = enemy.enemy_fish.region_rect.size.x * enemy.enemy_fish.scale.x
@@ -33,6 +34,12 @@ func die():
 func grow():
 	player_sprite.scale *= GROWTH
 	player_collider.scale *= GROWTH
+	var player_width= player_sprite.region_rect.size.x * player_sprite.scale.x
+	var screen_width = get_viewport().get_visible_rect().size.x
+	if(player_width > screen_width):
+		Engine.time_scale = 0
+		win_ui.visible = true
+		
 	
 
 

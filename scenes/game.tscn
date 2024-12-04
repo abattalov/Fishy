@@ -71,6 +71,46 @@ offset_bottom = 459.0
 theme = ExtResource("13_n4xi6")
 text = "Quit"
 
+[node name="WinScreen" type="CanvasLayer" parent="."]
+
+[node name="WinUI" type="Control" parent="WinScreen"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -30.0
+offset_right = 1182.0
+offset_bottom = 665.0
+script = ExtResource("12_oojcj")
+
+[node name="Label" type="Label" parent="WinScreen/WinUI"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 154.0
+offset_right = 792.0
+offset_bottom = 266.0
+theme = ExtResource("13_n4xi6")
+theme_override_font_sizes/font_size = 81
+text = "You Win!
+"
+
+[node name="PlayAgain" type="Button" parent="WinScreen/WinUI"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 371.0
+offset_right = 582.0
+offset_bottom = 460.0
+theme = ExtResource("13_n4xi6")
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="WinScreen/WinUI"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 370.0
+offset_right = 806.0
+offset_bottom = 459.0
+theme = ExtResource("13_n4xi6")
+text = "Quit"
+
 [node name="OceanFloor" type="Node" parent="."]
 
 [node name="Ceiling" type="StaticBody2D" parent="OceanFloor"]
@@ -112,3 +152,5 @@ layer_0/tile_data = PackedInt32Array(2359296, 3866625, 24, 2424832, 3866625, 25,
 [connection signal="timeout" from="EnemySpawner/SpawnTimer" to="EnemySpawner" method="_on_timer_timout"]
 [connection signal="pressed" from="GameOverScreen/GameOverUI/Retry" to="GameOverScreen/GameOverUI" method="_on_retry_pressed"]
 [connection signal="pressed" from="GameOverScreen/GameOverUI/Quit" to="GameOverScreen/GameOverUI" method="_on_quit_pressed"]
+[connection signal="pressed" from="WinScreen/WinUI/PlayAgain" to="WinScreen/WinUI" method="_on_retry_pressed"]
+[connection signal="pressed" from="WinScreen/WinUI/Quit" to="WinScreen/WinUI" method="_on_quit_pressed"]
