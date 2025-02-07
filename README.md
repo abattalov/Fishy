@@ -13,7 +13,7 @@ A modern reimagining of the classic Flash game **Fishy**, built in **Godot**. Ea
 - **Language:** GDScript
 
 ## 🚀 Installation
-1. **Download** the latest release from the [Releases](#) page.
+1. **Download** the latest release.
 2. **Extract** the files.
 3. **Run** the executable.
 
